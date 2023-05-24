@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "tripmate-agent-ongq",
+  "private_key_id": "5e7d89b4dc15e1898bedda4bd6e631acdabb3276",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDWYISqT//EcHHD\npLsS3B/ZjevFeDQ/i12Bj2F3ENDwxLRI2lxO2X0cdPU+U+G9+N7xX+mvUR18UJTN\nJ9QfNK815gq6xx3D8FogULn+MtR8l9yGjAsLa98Kst0AP9GJvgRdiMCUvqp45vBC\nVs42RiYMFQs1em515rir8DVvvy9+ezCGu6aVq/SV/lIaT2OtZgiZCRrQiSPb7Kkz\ngTU7I28frp3BF4eNsV89lXTVzu8iZiZnOu6hQhszCsx5I0YPuSyOEkVWpF+MWkkP\n2Tw4eHsVjS5dHumT/lIWUslGETno4cfTyO3gbdscuxJ0FCYvFc26HPvioSFadW3V\nztpa3Tv7AgMBAAECggEAQC6TaX4cAA7+MGnQTFw0+OhhjzRmyCOMci6gKoqRU5RA\nuZMOkdjReUSW6/snGb452SAzEXcCkeZ6NlXXTyRx1Hwz+CmHAtOh2AzzMmS7czXw\nIyQoZln8Y/Ka8ekpbcjC+9HmfmH7HcleYy4j/OHRoEpombE3Avt5jJiVFwixSndA\nsLyL5ugYDTbcAevSf+u3yaCAzOr0U9LRZzLThMJxQr2dcOWuhoLc0Gg91l53Xbev\nwEcqi6ceJY8CblvgVMuqTJSH15ZVhzLyV9TVlId+yvTQexZGzBzdU18Cs5pdMdXY\nM0XQk34veEWxyUyyfEottzrNH49lWCLO52YY/BXuSQKBgQD8Ba7ssK7DfcwPPNXV\nydBDZIBKI7rp+NqhB8MzyhTRF25JzodOGy/XLPLZj+gkfGiSFD4VRXSD8UcLyy2x\nma6JC11qbQdhfGr/IKekiQZHvaedFaogOg93QoBxo8uZBOZVVaxYZE0ntqda1RUD\nxUzrsBycbdHcNh9Cu5c+Wo8BVwKBgQDZwrn44XQKKFLqYa9NrH8py4NrycllO5tt\n88Q7nJVNw2Bh9B1JI/7im/35I9ghREQX+KmmKeAsOLU0ghcnj13GRz1FiHll5ff1\nSWZqWr4NlCdv9S71jN+22mSgiKwksPQ0nv2SlZlcuExyKFoJkkmowZ8j5BHdThX2\nXNzPAB+//QKBgQDAHvUCqo4PqU5uL0oz9+0z8uF5o1NSGctRBsHgMSU9YEdLLI4p\nFMCboEBhajrl1ZFCCvxo6tGv47btXq4uvaE4B9nmz8bYoihO5W3nGC4ZcpLcRS+z\n8Y7os2GHP/5tYDbWxsDjgVLv+2YI8HdcsIO7CD5HYdChtwCNtsPNXOu3cQKBgQCj\nmAIE8sMtelvIT3jWnret24Gw8ZiGoABF2zNaIWmdUSFQlYeG0i8DaXOkvwP5AgMy\nCxLQjXcnYbboaq8gfjlR42UpnrytC9Z7hRgW4HMVWm9CUe1kdd//zBR68hJ5QiNE\ngQk5HYBowuBThvMVa7xAtq1q1kWBf89KFTuhm5M+tQKBgE8lELMY3qTELkRhMR7I\n4eEdouxFlC4KCmXAWkz/j5+/Ef6SNiJw/ujA6YZIyS17MjsfOGfQyvPklLtK4uHe\n2zRmZDl7XXsHu8nbtcoa7NsIuEQ42ljcuMrG4S3dmUf3+n4l3y7PdXQbNfRc+bMG\nJ6ChjNZkr4rm8ygLQC5HCq8j\n-----END PRIVATE KEY-----\n",
+  "client_email": "tripmate-agent@tripmate-agent-ongq.iam.gserviceaccount.com",
+  "client_id": "104340309948625715280",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tripmate-agent%40tripmate-agent-ongq.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
