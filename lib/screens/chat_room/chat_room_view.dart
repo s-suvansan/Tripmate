@@ -101,7 +101,7 @@ class _TypingView extends ViewModelWidget<ChatRoomViewModel> {
     if (viewModel.isBotTyping) {
       return Padding(
         padding: const EdgeInsets.all(8.0),
-        child: _ChatTile(MessageModel(message: "•••••", isSenderMessage: false)),
+        child: _ChatTile(key: UniqueKey(), message: MessageModel(message: "•••••", isSenderMessage: false)),
       );
     }
     return const SizedBox.shrink();
@@ -109,6 +109,7 @@ class _TypingView extends ViewModelWidget<ChatRoomViewModel> {
 }
 
 class _ChatList extends ViewModelWidget<ChatRoomViewModel> {
+  const _ChatList({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, ChatRoomViewModel viewModel) {
     return StreamBuilder(
@@ -125,7 +126,10 @@ class _ChatList extends ViewModelWidget<ChatRoomViewModel> {
                 reverse: true,
                 padding: const EdgeInsets.all(8.0),
                 itemBuilder: (context, index) {
-                  return _ChatTile(docs[index].data());
+                  return _ChatTile(
+                    key: UniqueKey(),
+                    message: docs[index].data(),
+                  );
                 },
                 separatorBuilder: (_, __) {
                   return const SizedBox(height: 8.0);
@@ -142,7 +146,8 @@ class _ChatList extends ViewModelWidget<ChatRoomViewModel> {
 
 class _ChatTile extends ViewModelWidget<ChatRoomViewModel> {
   final MessageModel message;
-  const _ChatTile(this.message);
+  const _ChatTile({Key? key, required this.message}) : super(key: key);
+
   @override
   Widget build(BuildContext context, ChatRoomViewModel viewModel) {
     bool isSender = message.isSenderMessage ?? false;
