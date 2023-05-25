@@ -7,6 +7,7 @@ import 'package:tripmate/service/firebase_services.dart';
 
 import '../../common/common_popup.dart';
 import '../../common/common_widgets.dart';
+import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class ChatRoomViewModel extends ChangeNotifier {
   late DialogFlowtter _dialogFlowtter;
@@ -21,7 +22,13 @@ class ChatRoomViewModel extends ChangeNotifier {
   bool _isBotTyping = false;
   bool get isBotTyping => _isBotTyping;
 
+  bool _isListening = false;
+  bool get isListening => _isListening;
+
+  late stt.SpeechToText speech;
+
   void onInit(BuildContext context) {
+    speech = stt.SpeechToText();
     DialogFlowtter.fromFile().then((instance) => _dialogFlowtter = instance);
     _chatRef = FirebaseServices.chatRef;
   }
@@ -53,9 +60,39 @@ class ChatRoomViewModel extends ChangeNotifier {
         )).then((value) {
       if (value != null && value) {
         FirebaseAuth.instance.signOut().then((value) {
+          _chatRef = null;
           Navigator.of(context).popAndPushNamed(InitView.routeName);
         });
       }
     });
+  }
+
+  void onSpeech() async {
+    if (!_isListening) {
+      _isListening = true;
+      notifyListeners();
+      bool available = await speech.initialize(onStatus: (_) {}, onError: (_) {}, debugLogging: true);
+      if (available) {
+        speech.listen(onResult: (result) {
+          debugPrint(result.recognizedWords);
+          if (result.recognizedWords != "") {
+            _controller.text = result.recognizedWords;
+          }
+        });
+      } else {
+        debugPrint("The user has denied the use of speech recognition.");
+      }
+    } else {
+      if (_isListening && _controller.text != "") {
+        onSentMessage();
+      }
+      _isListening = false;
+      notifyListeners();
+      speech.stop();
+    }
+  }
+
+  void onStopSpeech() {
+    speech.stop();
   }
 }

@@ -272,7 +272,8 @@ class _ChatFeild extends ViewModelWidget<ChatRoomViewModel> {
             mainAxisSize: MainAxisSize.min,
             children: [
               GestureDetector(
-                onTap: () {},
+                onTap: () => viewModel.onSpeech(),
+                // onLongPressCancel: () => viewModel.onStopSpeech(),
                 child: Container(
                   height: 50.0,
                   width: 50.0,
@@ -281,7 +282,7 @@ class _ChatFeild extends ViewModelWidget<ChatRoomViewModel> {
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
-                    Icons.mic,
+                    viewModel.isListening ? Icons.stop : Icons.mic,
                     size: 28.0,
                     color: BrandColors.brandColor,
                   ),
