@@ -96,3 +96,10 @@ class ChatRoomViewModel extends ChangeNotifier {
     speech.stop();
   }
 }
+
+enum Name {
+  one(1),
+  two(2);
+
+  const Name(type);
+}
